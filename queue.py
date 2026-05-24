@@ -10,7 +10,7 @@ class Queue:
      return str(self.__data)
     
     def is_full(self) -> bool:
-      if (self.size == self.__max_size ):
+      if (len(self.__data) >= self.__max_size ):
         return True
       else:
         return False
@@ -26,7 +26,7 @@ class Queue:
         if len(self.__data) == 0:
          print("Lista Vazia")
         else:
-         self.__data.pop(elemento[0])
+          return self.__data.pop(elemento[0])
 
     def is_emply(self) -> bool:
      if len(self.__data) == 0:
@@ -35,9 +35,10 @@ class Queue:
        return False     
     
     def peek(self) -> Any:
-       if self.is_emply == True:
+       if len(self.__data) == 0:
          print("Lista Vazia")
-       return self.__data[0]
+       else: 
+          return print(self.__data[0])
      
     
     def size(self) -> Any:
@@ -47,17 +48,20 @@ class Queue:
 
     def clear(self) -> Any: 
       self.__data.clear()
-      print("Lista LIMPA")
+      print("Lista foi LIMPA")
 
 
 if __name__ == "__main__":
    lista = Queue(3)
-   lista.enqueue(5)
+   lista.enqueue(1)
+   lista.enqueue(2)
    lista.enqueue(3)
    print(lista)
-   lista.dequeue
-   lista.peek
-   print(lista.is_emply())
-   print(lista.size())
+   print(lista.is_full())
+   lista.clear()
+   print(lista.is_full())
 
-   print(lista)
+  
+  
+   
+   
