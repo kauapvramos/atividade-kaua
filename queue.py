@@ -22,11 +22,11 @@ class Queue:
         else:
          self.__data.append(elemento)
     
-    def dequeue(self, elemento: Any) -> None:
+    def dequeue(self) -> None:
         if len(self.__data) == 0:
          print("Lista Vazia")
         else:
-          return self.__data.pop(elemento[0])
+          return print("Item removido: ",self.__data.pop(0))
 
     def is_emply(self) -> bool:
      if len(self.__data) == 0:
@@ -38,7 +38,7 @@ class Queue:
        if len(self.__data) == 0:
          print("Lista Vazia")
        else: 
-          return print(self.__data[0])
+          return print("Primeiro Item: ",self.__data[0])
      
     
     def size(self) -> Any:
@@ -48,18 +48,15 @@ class Queue:
 
     def clear(self) -> Any: 
       self.__data.clear()
-      print("Lista foi LIMPA")
+      print("Metodo clear: lista foi limpa")
+
+    ### metodo pop para indicar o indicie do elemento a ser removido no dequeue
+    def pop(self) -> Any:
+        if not self.__data:
+            return None
+        return self.__data.pop
 
 
-if __name__ == "__main__":
-   lista = Queue(3)
-   lista.enqueue(1)
-   lista.enqueue(2)
-   lista.enqueue(3)
-   print(lista)
-   print(lista.is_full())
-   lista.clear()
-   print(lista.is_full())
 
   
   
