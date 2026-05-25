@@ -20,7 +20,7 @@ if __name__ == "__main__":
    print(lista.is_full())
 
    ## Verificando se esta Vazia 01
-   print(lista.is_emply())
+   print(lista.is_empty())
 
    ## Adicionado mais um valor a Lista mostrando que esta cheia 
    lista.enqueue(4)
@@ -42,7 +42,7 @@ if __name__ == "__main__":
    print("Lista no momento: ", lista)
 
    ## Verificando se esta Vazia 02
-   print(lista.is_emply())
+   print(lista.is_empty())
 
 
 

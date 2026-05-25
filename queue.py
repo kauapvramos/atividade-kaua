@@ -10,10 +10,10 @@ class Queue:
      return str(self.__data)
     
     def is_full(self) -> bool:
-      if (len(self.__data) >= self.__max_size ):
-        return True
-      else:
-        return False
+        if self.__max_size is None:
+            return False
+
+        return len(self.__data) >= self.__max_size
     
     def enqueue(self, elemento: Any) -> None:
         if self.is_full():
@@ -28,7 +28,7 @@ class Queue:
         else:
           return print("Item removido: ",self.__data.pop(0))
 
-    def is_emply(self) -> bool:
+    def is_empty(self) -> bool:
      if len(self.__data) == 0:
        return True
      else:
